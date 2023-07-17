@@ -51,7 +51,19 @@
 import SwiftUI
 
 struct popUpDest: View {
-    var schedule:[String] = ["", "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]
+    var schedule:[String] = ["","Bundaran HI",
+                             "Dukuh Atas BNI",
+                             "Setiabudi Astra",
+                             "Bendungan Hilir",
+                             "Istora Mandiri",
+                             "Senayan",
+                             "Asean",
+                             "Blok M",
+                             "Blok A",
+                             "Haji Nawi",
+                             "Cipete Raya",
+                             "Fatmawati",
+                             "Lebak Bulus Grab"]
     @Binding var time:String
 
     var body: some View {

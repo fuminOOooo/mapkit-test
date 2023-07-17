@@ -32,8 +32,8 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
             longitudeDelta: 0.1
         )
     )
-    
-    @Published var dukuhAtasRegion = MKCoordinateRegion (
+
+    @Published var stationRegion = MKCoordinateRegion (
         center: CLLocationCoordinate2D (
             latitude: -6.20079,
             longitude: 106.82279
@@ -46,6 +46,12 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
     
     @Published var isInside : Bool = false
     
+    func getStation (station: String) -> [Station] {
+        return stations.filter {
+            $0.name.contains(station)
+        }
+    }
+    
     func serviceAvailabilityCheck() {
             
         if CLLocationManager.locationServicesEnabled() {
@@ -57,13 +63,18 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         
     }
     
-    func checkIfUserIsInInsideRegion() {
+    func checkIfUserIsInInsideRegion(dest:String) {
+        if dest != "" {
+            let destination = getStation(station: dest)
+            stationRegion.center = destination[0].coord
+        }
         todaysDate = Date()
         guard let locationManager = locationManager else { return }
         guard let tempLocation = locationManager.location?.coordinate else { return }
-        print(tempLocation)
         userRegion.center = tempLocation
-        let dukuhAtasLocationPoint = MKMapPoint(dukuhAtasRegion.center)
+        print(userRegion.center)
+        print(stationRegion.center)
+        let dukuhAtasLocationPoint = MKMapPoint(stationRegion.center)
         let userLocationPoint = MKMapPoint(userRegion.center)
         if (userLocationPoint.distance(to: dukuhAtasLocationPoint) <= 500) {
             isInside = true

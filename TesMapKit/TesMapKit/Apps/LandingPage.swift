@@ -55,7 +55,7 @@ struct LandingPage: View {
                         
                         VStack (spacing: 4) {
                             Text("Sekarang anda memasuki daerah")
-                            Text("Apple Academy!").underline()
+                            Text("\(dest)").underline()
                         }
                         .foregroundColor(colors.gray)
                         .font(Font.custom("SF-Pro-Text-Regular", size: 16))
@@ -68,19 +68,19 @@ struct LandingPage: View {
                         HStack (spacing: 4) {
                             Text("Sekarang anda")
                             Text("tidak").underline()
-                            Text("berada di lokasi!")
+                            Text("berada di \(dest)")
                         }
                         .foregroundColor(colors.gray)
                         .padding(.top)
                         
                     }
-                    VStack (spacing: 4) {
-                        Text(String(viewModel.refreshingInZero))
-                    }
-                    .foregroundColor(colors.gray)
-                    .font(Font.custom("SF-Pro-Text-Regular", size: 16))
-                    .padding(.top)
-                    .multilineTextAlignment(.center)
+//                    VStack (spacing: 4) {
+//                        Text(String(viewModel.refreshingInZero))
+//                    }
+//                    .foregroundColor(colors.gray)
+//                    .font(Font.custom("SF-Pro-Text-Regular", size: 16))
+//                    .padding(.top)
+//                    .multilineTextAlignment(.center)
                     
                     Spacer()
                     
@@ -119,7 +119,7 @@ struct LandingPage: View {
                 viewModel.refreshingInZero -= 1
             } else if viewModel.refreshingInZero == 0 {
                 viewModel.locationAuthorizationCheck()
-                viewModel.checkIfUserIsInInsideRegion()
+                viewModel.checkIfUserIsInInsideRegion(dest: dest)
                 viewModel.refreshingInZero = 1
             }
         }

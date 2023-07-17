@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15582FE62A135CC20065D51B /* TesMapKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15582FE52A135CC20065D51B /* TesMapKitApp.swift */; };
+		15582FE82A135CC20065D51B /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15582FE72A135CC20065D51B /* LandingPage.swift */; };
+		15582FEA2A135CC30065D51B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15582FE92A135CC30065D51B /* Assets.xcassets */; };
+		15582FEE2A135CC30065D51B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15582FED2A135CC30065D51B /* Preview Assets.xcassets */; };
+		15582FF52A135FD40065D51B /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15582FF42A135FD40065D51B /* MapViewModel.swift */; };
+		155830192A1C6E140065D51B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155830182A1C6E140065D51B /* Colors.swift */; };
+		1558301B2A1C71B30065D51B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558301A2A1C71B30065D51B /* CustomButton.swift */; };
+		155830692A1C824B0065D51B /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1558303A2A1C824B0065D51B /* SF-Pro.ttf */; };
+		155830812A1C83300065D51B /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 155830802A1C83300065D51B /* SF-Pro-Text-Light.otf */; };
+		155830832A1C84070065D51B /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 155830822A1C84070065D51B /* SF-Pro-Text-Regular.otf */; };
+		155830852A1C84140065D51B /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 155830842A1C84140065D51B /* SF-Pro-Rounded-Regular.otf */; };
+		155830882A1D1A3D0065D51B /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 155830872A1D1A3D0065D51B /* Supabase */; };
+		1558308A2A1D1A9E0065D51B /* ChatPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155830892A1D1A9E0065D51B /* ChatPage.swift */; };
+		1558308D2A1D25510065D51B /* FirstTimeModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558308C2A1D25510065D51B /* FirstTimeModal.swift */; };
+		155830912A1D2D7E0065D51B /* OutsideLocationModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155830902A1D2D7E0065D51B /* OutsideLocationModal.swift */; };
+		155830932A1D41960065D51B /* LocationUnauthorizedModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155830922A1D41960065D51B /* LocationUnauthorizedModal.swift */; };
+		155830952A1DAF0C0065D51B /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155830942A1DAF0C0065D51B /* ChatViewModel.swift */; };
+		155830972A1E15070065D51B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155830962A1E15060065D51B /* Constant.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		15582FE22A135CC20065D51B /* TesMapKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesMapKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15582FE52A135CC20065D51B /* TesMapKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesMapKitApp.swift; sourceTree = "<group>"; };
+		15582FE72A135CC20065D51B /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
+		15582FE92A135CC30065D51B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15582FEB2A135CC30065D51B /* TesMapKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TesMapKit.entitlements; sourceTree = "<group>"; };
+		15582FED2A135CC30065D51B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		15582FF42A135FD40065D51B /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		155830182A1C6E140065D51B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		1558301A2A1C71B30065D51B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		1558303A2A1C824B0065D51B /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro.ttf"; path = "../../../../../Library/Fonts/SF-Pro.ttf"; sourceTree = "<group>"; };
+		1558307F2A1C82760065D51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		155830802A1C83300065D51B /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Light.otf"; path = "../../../../../Library/Fonts/SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
+		155830822A1C84070065D51B /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Regular.otf"; path = "../../../../../Library/Fonts/SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		155830842A1C84140065D51B /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Rounded-Regular.otf"; path = "../../../../../Library/Fonts/SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
+		155830892A1D1A9E0065D51B /* ChatPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPage.swift; sourceTree = "<group>"; };
+		1558308C2A1D25510065D51B /* FirstTimeModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeModal.swift; sourceTree = "<group>"; };
+		155830902A1D2D7E0065D51B /* OutsideLocationModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsideLocationModal.swift; sourceTree = "<group>"; };
+		155830922A1D41960065D51B /* LocationUnauthorizedModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUnauthorizedModal.swift; sourceTree = "<group>"; };
+		155830942A1DAF0C0065D51B /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		155830962A1E15060065D51B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15582FDF2A135CC20065D51B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155830882A1D1A3D0065D51B /* Supabase in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15582FD92A135CC20065D51B = {
+			isa = PBXGroup;
+			children = (
+				155830202A1C81FB0065D51B /* Fonts */,
+				15582FE42A135CC20065D51B /* TesMapKit */,
+				15582FE32A135CC20065D51B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15582FE32A135CC20065D51B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15582FE22A135CC20065D51B /* TesMapKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15582FE42A135CC20065D51B /* TesMapKit */ = {
+			isa = PBXGroup;
+			children = (
+				1558307F2A1C82760065D51B /* Info.plist */,
+				15582FE52A135CC20065D51B /* TesMapKitApp.swift */,
+				15582FF42A135FD40065D51B /* MapViewModel.swift */,
+				155830942A1DAF0C0065D51B /* ChatViewModel.swift */,
+				15582FE72A135CC20065D51B /* LandingPage.swift */,
+				155830892A1D1A9E0065D51B /* ChatPage.swift */,
+				155830922A1D41960065D51B /* LocationUnauthorizedModal.swift */,
+				155830902A1D2D7E0065D51B /* OutsideLocationModal.swift */,
+				1558308C2A1D25510065D51B /* FirstTimeModal.swift */,
+				15582FE92A135CC30065D51B /* Assets.xcassets */,
+				15582FEB2A135CC30065D51B /* TesMapKit.entitlements */,
+				15582FEC2A135CC30065D51B /* Preview Content */,
+				155830182A1C6E140065D51B /* Colors.swift */,
+				155830962A1E15060065D51B /* Constant.swift */,
+				1558301A2A1C71B30065D51B /* CustomButton.swift */,
+			);
+			path = TesMapKit;
+			sourceTree = "<group>";
+		};
+		15582FEC2A135CC30065D51B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				15582FED2A135CC30065D51B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		155830202A1C81FB0065D51B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				155830802A1C83300065D51B /* SF-Pro-Text-Light.otf */,
+				155830822A1C84070065D51B /* SF-Pro-Text-Regular.otf */,
+				155830842A1C84140065D51B /* SF-Pro-Rounded-Regular.otf */,
+				1558303A2A1C824B0065D51B /* SF-Pro.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15582FE12A135CC20065D51B /* TesMapKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15582FF12A135CC30065D51B /* Build configuration list for PBXNativeTarget "TesMapKit" */;
+			buildPhases = (
+				15582FDE2A135CC20065D51B /* Sources */,
+				15582FDF2A135CC20065D51B /* Frameworks */,
+				15582FE02A135CC20065D51B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TesMapKit;
+			packageProductDependencies = (
+				155830872A1D1A3D0065D51B /* Supabase */,
+			);
+			productName = TesMapKit;
+			productReference = 15582FE22A135CC20065D51B /* TesMapKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15582FDA2A135CC20065D51B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					15582FE12A135CC20065D51B = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 15582FDD2A135CC20065D51B /* Build configuration list for PBXProject "TesMapKit" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15582FD92A135CC20065D51B;
+			packageReferences = (
+				155830862A1D1A3D0065D51B /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
+			productRefGroup = 15582FE32A135CC20065D51B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15582FE12A135CC20065D51B /* TesMapKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15582FE02A135CC20065D51B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15582FEE2A135CC30065D51B /* Preview Assets.xcassets in Resources */,
+				155830832A1C84070065D51B /* SF-Pro-Text-Regular.otf in Resources */,
+				15582FEA2A135CC30065D51B /* Assets.xcassets in Resources */,
+				155830812A1C83300065D51B /* SF-Pro-Text-Light.otf in Resources */,
+				155830692A1C824B0065D51B /* SF-Pro.ttf in Resources */,
+				155830852A1C84140065D51B /* SF-Pro-Rounded-Regular.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15582FDE2A135CC20065D51B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155830912A1D2D7E0065D51B /* OutsideLocationModal.swift in Sources */,
+				15582FE82A135CC20065D51B /* LandingPage.swift in Sources */,
+				155830192A1C6E140065D51B /* Colors.swift in Sources */,
+				155830932A1D41960065D51B /* LocationUnauthorizedModal.swift in Sources */,
+				1558308A2A1D1A9E0065D51B /* ChatPage.swift in Sources */,
+				15582FE62A135CC20065D51B /* TesMapKitApp.swift in Sources */,
+				15582FF52A135FD40065D51B /* MapViewModel.swift in Sources */,
+				1558308D2A1D25510065D51B /* FirstTimeModal.swift in Sources */,
+				155830972A1E15070065D51B /* Constant.swift in Sources */,
+				155830952A1DAF0C0065D51B /* ChatViewModel.swift in Sources */,
+				1558301B2A1C71B30065D51B /* CustomButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		15582FEF2A135CC30065D51B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		15582FF02A135CC30065D51B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		15582FF22A135CC30065D51B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TesMapKit/TesMapKit.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TesMapKit/Preview Content\"";
+				DEVELOPMENT_TEAM = 35V95TRX69;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TesMapKit/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Aca-Talk needs to constantly check your location for feature availabilities.";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myorganization.TesMapKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15582FF32A135CC30065D51B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TesMapKit/TesMapKit.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TesMapKit/Preview Content\"";
+				DEVELOPMENT_TEAM = 35V95TRX69;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TesMapKit/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Aca-Talk needs to constantly check your location for feature availabilities.";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myorganization.TesMapKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15582FDD2A135CC20065D51B /* Build configuration list for PBXProject "TesMapKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15582FEF2A135CC30065D51B /* Debug */,
+				15582FF02A135CC30065D51B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15582FF12A135CC30065D51B /* Build configuration list for PBXNativeTarget "TesMapKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15582FF22A135CC30065D51B /* Debug */,
+				15582FF32A135CC30065D51B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		155830862A1D1A3D0065D51B /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		155830872A1D1A3D0065D51B /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 155830862A1D1A3D0065D51B /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 15582FDA2A135CC20065D51B /* Project object */;
+}

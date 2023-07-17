@@ -13,7 +13,7 @@ struct LandingPage: View {
     @StateObject private var viewModel = MapViewModel()
     
     @State private var isInaccessible : Bool = false
-    @State private var dest: String = "Set Destination"
+    @State private var dest: String = ""
     @State var isPopUpTime = false
     @EnvironmentObject var sheetManager:SheetManager
     
@@ -26,6 +26,7 @@ struct LandingPage: View {
                 colors.backgroundColor.ignoresSafeArea()
                 
                 VStack {
+                    Text("Choose Your Destination")
                     HStack{
                         Image("time")
                             .padding(.leading,10)
@@ -125,6 +126,7 @@ struct LandingPage: View {
         }
         .onAppear {
             viewModel.serviceAvailabilityCheck()
+            print(dest)
         }
     }
 }

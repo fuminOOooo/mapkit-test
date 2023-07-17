@@ -68,6 +68,9 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
             let destination = getStation(station: dest)
             stationRegion.center = destination[0].coord
         }
+        else {
+            stationRegion.center = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+        }
         todaysDate = Date()
         guard let locationManager = locationManager else { return }
         guard let tempLocation = locationManager.location?.coordinate else { return }

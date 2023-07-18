@@ -51,7 +51,9 @@
 import SwiftUI
 
 struct popUpDest: View {
-    var schedule:[String] = ["","Bundaran HI",
+    
+    var schedule: [String] = ["", "Apple Academy",
+                             "Bundaran HI",
                              "Dukuh Atas BNI",
                              "Setiabudi Astra",
                              "Bendungan Hilir",
@@ -64,10 +66,11 @@ struct popUpDest: View {
                              "Cipete Raya",
                              "Fatmawati",
                              "Lebak Bulus Grab"]
-    @Binding var time:String
+    
+    @Binding var time: String
 
     var body: some View {
-        VStack(alignment: .center,spacing: 0){
+        VStack(alignment: .center,spacing: 0) {
             Picker("Selected Halte", selection: $time) {
                 ForEach(schedule, id: \.self) { halteName in
                            Text(halteName)

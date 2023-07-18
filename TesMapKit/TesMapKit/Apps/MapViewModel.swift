@@ -11,9 +11,7 @@ import CoreLocation
 
 final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
-    @Published var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
-    @Published var refreshingInZero = 3
+    @Published var dest: String = ""
     
     @Published var todaysDate = Date()
     
@@ -21,28 +19,9 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
     
     @Published var locationAccess : Bool = true
     
-    
-    @Published var userRegion = MKCoordinateRegion (
-        center: CLLocationCoordinate2D (
-            latitude: 37.33546,
-            longitude: 122.00908
-        ),
-        span: MKCoordinateSpan (
-            latitudeDelta: 0.1,
-            longitudeDelta: 0.1
-        )
-    )
+    @Published var userRegion : CLLocation?
 
-    @Published var stationRegion = MKCoordinateRegion (
-        center: CLLocationCoordinate2D (
-            latitude: -6.20079,
-            longitude: 106.82279
-        ),
-        span: MKCoordinateSpan (
-            latitudeDelta: 0.1,
-            longitudeDelta: 0.1
-        )
-    )
+    @Published var stationRegion : CLCircularRegion?
     
     @Published var isInside : Bool = false
     
@@ -53,43 +32,39 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
     }
     
     func serviceAvailabilityCheck() {
-            
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager = CLLocationManager()
-            locationManager?.delegate = self
-        } else {
-            print("Location Services not Enabled.")
+        DispatchQueue.main.async {
+            if CLLocationManager.locationServicesEnabled() {
+                self.locationManager = CLLocationManager()
+                self.locationManager?.delegate = self
+            } else {
+                print("Location Services not Enabled.")
+            }
         }
-        
     }
     
-    func checkIfUserIsInInsideRegion(dest:String) {
-        if dest != "" {
-            let destination = getStation(station: dest)
-            stationRegion.center = destination[0].coord
-        }
-        else {
-            stationRegion.center = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-        }
-        todaysDate = Date()
-        guard let locationManager = locationManager else { return }
-        guard let tempLocation = locationManager.location?.coordinate else { return }
-        userRegion.center = tempLocation
-        print(userRegion.center)
-        print(stationRegion.center)
-        let dukuhAtasLocationPoint = MKMapPoint(stationRegion.center)
-        let userLocationPoint = MKMapPoint(userRegion.center)
-        if (userLocationPoint.distance(to: dukuhAtasLocationPoint) <= 500) {
-            isInside = true
-        } else {
-            isInside = false
-        }
-        print(isInside)
-    }
+//    func checkIfUserIsInInsideRegion() {
+//
+//        todaysDate = Date()
+//        guard let locationManager = locationManager else { return }
+//        guard let tempLocation = locationManager.location?.coordinate else { return }
+//        userRegion.center = tempLocation
+//        print(userRegion.center)
+//        print(stationRegion.center)
+//        let dukuhAtasLocationPoint = MKMapPoint(stationRegion.center)
+//        let userLocationPoint = MKMapPoint(userRegion.center)
+//        if (userLocationPoint.distance(to: dukuhAtasLocationPoint) <= 500) {
+//            isInside = true
+//        } else {
+//            isInside = false
+//        }
+//        print(isInside)
+//    }
     
     func locationAuthorizationCheck() {
         
         guard let locationManager = locationManager else { return }
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         
         switch locationManager.authorizationStatus {
             
@@ -106,13 +81,6 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
             
         case .authorizedAlways, .authorizedWhenInUse:
             locationAccess = true
-            userRegion = MKCoordinateRegion (
-                center: locationManager.location!.coordinate,
-                span: MKCoordinateSpan (
-                    latitudeDelta: 0.1,
-                    longitudeDelta: 0.1
-                )
-            )
             
         @unknown default:
             break
@@ -120,7 +88,46 @@ final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         }
         
     }
+    
+    func startMonitoring () {
+        if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
+            
+            if dest != "" {
+                stationRegion = CLCircularRegion (
+                    center: getStation(station: dest).first!.coord,
+                    radius: 300,
+                    identifier: dest
+                )
+            }
+            else {
+                stationRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 0, longitude: 0), radius: 300, identifier: "")
+            }
+            
+            let geofenceRegion = stationRegion
+            geofenceRegion!.notifyOnExit = true
+            geofenceRegion!.notifyOnEntry = true
+            
+            locationManager?.startMonitoring(for: geofenceRegion!)
+        }
+    }
+    
+    func stopMonitoring () {
         
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        // Notifikasi Memasuki Daerah Satu Stasiun
+        isInside = true
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        isInside = false
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        userRegion = locations.last
+    }
+    
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         locationAuthorizationCheck()
     }

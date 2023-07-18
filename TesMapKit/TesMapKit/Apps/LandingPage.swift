@@ -13,9 +13,10 @@ struct LandingPage: View {
     @StateObject private var viewModel = MapViewModel()
     
     @State private var isInaccessible : Bool = false
-    @State private var dest: String = ""
+    
     @State var isPopUpTime = false
-    @EnvironmentObject var sheetManager:SheetManager
+    
+    @EnvironmentObject var sheetManager: SheetManager
     
     var body: some View {
         
@@ -26,8 +27,11 @@ struct LandingPage: View {
                 colors.backgroundColor.ignoresSafeArea()
                 
                 VStack {
+                    
                     Text("Choose Your Destination")
+                    
                     HStack{
+                        
                         Image("time")
                             .padding(.leading,10)
                         Button {
@@ -36,13 +40,15 @@ struct LandingPage: View {
                             }
                         } label: {
                             HStack{
-                                Text("\(dest)")
-                                    .foregroundColor(dest != "Set Destination" ? .black : .gray)
+                                Text("\(viewModel.dest)")
+                                    .foregroundColor(viewModel.dest != "Set Destination" ? .black : .gray)
                                 Spacer()
                             }
                             .frame(width: 200)
                         }
+                        
                         Spacer()
+                        
                     }
                     .frame(width: 327, height: 50)
                     .background(.white)
@@ -56,7 +62,7 @@ struct LandingPage: View {
                         
                         VStack (spacing: 4) {
                             Text("Sekarang anda memasuki daerah")
-                            Text("\(dest)").underline()
+                            Text("\(viewModel.dest)").underline()
                         }
                         .foregroundColor(colors.gray)
                         .font(Font.custom("SF-Pro-Text-Regular", size: 16))
@@ -64,28 +70,23 @@ struct LandingPage: View {
                         .multilineTextAlignment(.center)
                         
                     }
+                    
                     else {
                         
                         HStack (spacing: 4) {
                             Text("Sekarang anda")
                             Text("tidak").underline()
-                            Text("berada di \(dest)")
+                            Text("berada di \(viewModel.dest)")
                         }
                         .foregroundColor(colors.gray)
                         .padding(.top)
                         
                     }
-//                    VStack (spacing: 4) {
-//                        Text(String(viewModel.refreshingInZero))
-//                    }
-//                    .foregroundColor(colors.gray)
-//                    .font(Font.custom("SF-Pro-Text-Regular", size: 16))
-//                    .padding(.top)
-//                    .multilineTextAlignment(.center)
                     
                     Spacer()
                     
                 }
+                
                 if isPopUpTime {
                     Color.black
                         .opacity(0.5)
@@ -109,25 +110,20 @@ struct LandingPage: View {
                 }
                 
             }
-            .overlay(alignment: .bottom){
+            .overlay(alignment: .bottom) {
                 if isPopUpTime{
-                    popUpDest(time: $dest)
+                    popUpDest(time: $viewModel.dest)
                 }
             }
         }
-        .onReceive(viewModel.timer) { _ in
-            if viewModel.refreshingInZero > 0 {
-                viewModel.refreshingInZero -= 1
-            } else if viewModel.refreshingInZero == 0 {
-                viewModel.locationAuthorizationCheck()
-                viewModel.checkIfUserIsInInsideRegion(dest: dest)
-                viewModel.refreshingInZero = 1
-            }
-        }
+        
         .onAppear {
             viewModel.serviceAvailabilityCheck()
-            print(dest)
         }
+        .onChange(of: viewModel.dest) { newValue in
+            viewModel.startMonitoring()
+        }
+        
     }
 }
 

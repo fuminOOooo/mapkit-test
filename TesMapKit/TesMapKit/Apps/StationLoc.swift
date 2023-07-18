@@ -15,6 +15,7 @@ struct Station: Identifiable {
 }
 
 let stations = [
+    Station(name: "Apple Academy", coord: CLLocationCoordinate2D(latitude: -6.302187311380335, longitude: 106.65256217678264)),
     Station(name: "Bundaran HI", coord: CLLocationCoordinate2D(latitude: -6.19188396034883, longitude: 106.82295539575925)),
     Station(name: "Dukuh Atas BNI", coord: CLLocationCoordinate2D(latitude: -6.200798527036672, longitude: 106.82279676630594)),
     Station(name: "Setiabudi Astra", coord: CLLocationCoordinate2D(latitude: -6.208865127008377, longitude: 106.82149529575942)),
